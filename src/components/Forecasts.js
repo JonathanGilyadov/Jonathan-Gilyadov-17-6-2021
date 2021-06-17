@@ -1,10 +1,9 @@
-import React, { Fragment, useState, useEffect, useCallback } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { useRouteMatch, Route, Switch, Redirect } from 'react-router-dom';
 import { TextField } from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { getLocationsAutocomplete } from '../ajax';
 import LocationProfile from './LocationProfile';
-import Select from 'react-select';
 import defaultOptions from './defaultOptions.json';
 
 const Forecasts = () => {
@@ -14,11 +13,6 @@ const Forecasts = () => {
 	});
 	const [query, setQuery] = useState('');
 	const [options, setOptions] = useState(defaultOptions);
-	const [isLoading, setLoading] = useState(false);
-	const [err, setErr] = useState({
-		isErr: false,
-		message: '',
-	});
 	let { path } = useRouteMatch();
 
 	useEffect(() => {
