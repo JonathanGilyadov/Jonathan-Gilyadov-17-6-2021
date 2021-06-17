@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import tempType from './TempTypes';
+import tempType from './tempTypes';
 import favoritesLocations from './favoritesLocations';
 
 export default combineReducers({
