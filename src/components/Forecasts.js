@@ -19,19 +19,10 @@ const Forecasts = () => {
 		if (query === '') {
 			setOptions(defaultOptions);
 		} else {
-			setLoading(true);
 			getLocationsAutocomplete(query)
 				.then(({ data }) => {
 					setOptions(data);
-					setLoading(false);
 				})
-				.catch((err) => {
-					setErr({
-						isErr: true,
-						message: "Something went wrong... Let's try one more time!",
-					});
-					setLoading(false);
-				});
 		}
 	}, [query]);
 
