@@ -1,0 +1,19 @@
+.day-item {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  text-transform: capitalize;
+  height: 72px;
+  justify-content: space-between;
+}
+
+.day-item .high {
+  font-size: 26px;
+}
+
+.day-item .low {
+  font-size: 16px;
+  color: #878787;
+  line-height: 1.33;
+  margin-left: -6px;
+}

@@ -1,0 +1,8 @@
+.weather-icon {
+  width: 120px;
+  height: 120px;
+}
+
+.weather-text-title {
+  font-size: 4.5vw;
+}
